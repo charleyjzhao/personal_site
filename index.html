@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charley Zhao // Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ── BOOT SCREEN ───────────────────────────────────────────── -->
+  <div id="boot-screen">
+    <div id="boot-terminal">
+      <div class="boot-line boot-final visible"><span id="boot-typed"></span><span class="boot-cursor">▋</span></div>
+    </div>
+  </div>
+
+  <!-- ── MAIN LAYOUT ──────────────────────────────────────────── -->
+  <div id="main-layout" class="initially-hidden">
+
+    <!-- LEFT RAIL NAV -->
+    <nav id="left-rail">
+      <div class="rail-top">
+        <div class="rail-monogram">Charley Zhao</div>
+        <div class="rail-divider"></div>
+        <ul class="rail-nav">
+          <li>
+            <a href="#hero" class="rail-link active">
+              <span class="rail-code">HME</span>
+              <span class="rail-label">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#experience" class="rail-link">
+              <span class="rail-code">EXP</span>
+              <span class="rail-label">Experience</span>
+            </a>
+          </li>
+          <li>
+            <a href="#ventures" class="rail-link">
+              <span class="rail-code">VNT</span>
+              <span class="rail-label">Venture &amp; Leadership</span>
+            </a>
+          </li>
+          <li>
+            <a href="#skills" class="rail-link">
+              <span class="rail-code">SKL</span>
+              <span class="rail-label">Skills</span>
+            </a>
+          </li>
+          <li>
+            <a href="#education" class="rail-link">
+              <span class="rail-code">EDU</span>
+              <span class="rail-label">Education</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="rail-link">
+              <span class="rail-code">CON</span>
+              <span class="rail-label">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="rail-bottom">
+        <div class="rail-divider"></div>
+        <button class="rail-cmd-btn" id="cmd-open-btn" title="Open command palette">
+          <kbd id="cmd-kbd-hint">⌘K</kbd>
+          <span>Search</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+
+      <!-- ── HERO ────────────────────────────────────────────── -->
+      <section id="hero">
+<div class="hero-inner">
+          <h1 class="hero-name">
+            <span id="tw-name"></span><span class="cursor" id="name-cursor"></span>
+          </h1>
+          <p class="hero-tagline">
+            <span id="tw-tagline"></span><span class="cursor cursor-inline" id="tag-cursor" style="display:none"></span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ── EXPERIENCE ─────────────────────────────────────── -->
+      <section id="experience" class="section">
+        <div class="section-header">
+          <span class="section-badge">EXP</span>
+          <h2 class="section-title">Experience</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <!-- DELOITTE COMPANY BLOCK -->
+        <div class="company-block reveal">
+          <div class="company-bar">
+            <span class="ticker-tag">DLT</span>
+            <div class="company-identity">
+              <span class="company-name">Deloitte Consulting</span>
+              <span class="company-loc">San Francisco, CA · Pittsburgh, PA</span>
+            </div>
+            <div class="company-range">2021 – 2025</div>
+          </div>
+
+          <!-- SR CONSULTANT -->
+          <div class="position-card">
+            <div class="pos-header">
+              <div class="pos-left">
+                <div class="pos-title">Senior Consultant</div>
+                <div class="pos-track">Strategy &amp; Transactions · 2025</div>
+              </div>
+              <div class="pos-status">
+                <span class="status-dot status-gray"></span>
+                <span class="pos-status-text">PREVIOUS</span>
+              </div>
+            </div>
+            <ul class="bullets">
+              <li>Led enterprise platform migration across 8 business units for 1,900+ automated workflows, building executive dashboards and weekly ops reviews that reduced operational complexity by 20%</li>
+              <li>Drove competitive positioning for 20+ banking technology pursuits ($500K-$25M+ deal sizes), evaluating enterprise fintech software platforms and synthesizing customer pain points into differentiated value propositions for prospective clients</li>
+              <li>Designed operating model for Deloitte's account leadership function, partnering with 40+ senior leaders across Audit, Advisory, Consulting, and Tax to define scalable frameworks for portfolio growth and succession planning</li>
+            </ul>
+            <div class="role-tags">
+              <span class="role-tag">Strategic Planning</span>
+              <span class="role-tag">Program Management</span>
+              <span class="role-tag">KPI Framework Development</span>
+              <span class="role-tag">Market &amp; Competitive Analysis</span>
+              <span class="role-tag">Enterprise Software Evaluation</span>
+            </div>
+          </div>
+
+          <!-- CONSULTANT -->
+          <div class="position-card">
+            <div class="pos-header">
+              <div class="pos-left">
+                <div class="pos-title">Consultant</div>
+                <div class="pos-track">Strategy &amp; Analytics · 2023 – 2025</div>
+              </div>
+              <div class="pos-status">
+                <span class="status-dot status-gray"></span>
+                <span class="pos-status-text">PREVIOUS</span>
+              </div>
+            </div>
+            <ul class="bullets">
+              <li>Developed performance reporting for banking transformation program involving 120+ stakeholders, defining KPIs across delivery and risk dimensions to increase executive visibility, triage blockers, and maintain velocity</li>
+              <li>Designed testing optimization initiative with quantified business case, building weekly dashboards tracking QA efficiency metrics across 7 workstreams and quantifying $3.2M in cost avoidance to secure C-suite buy-in</li>
+              <li>Built go-live readiness playbook for business-critical platform cutover, creating runbooks and rollout checklists enabling zero-downtime migration serving 1M+ customers</li>
+              <li>Coordinated governance across 20+ Audit, Risk, Compliance, and engineering stakeholders, establishing decision forums and escalation paths to align regulatory requirements with program execution</li>
+              <li>Co-authored digital banking whitepaper defining strategic imperatives for next-generation platforms, synthesizing market and trend analysis to forecast banking industry evolution</li>
+              <li>Architected long-term technology roadmap for microservices transformation, facilitating 20+ discovery workshops with senior IT stakeholders to evaluate integration with 45 third-party enterprise applications</li>
+            </ul>
+            <div class="role-tags">
+              <span class="role-tag">Performance Reporting</span>
+              <span class="role-tag">KPI Framework Development</span>
+              <span class="role-tag">Program Management</span>
+              <span class="role-tag">Market Research</span>
+              <span class="role-tag">Strategic Planning</span>
+              <span class="role-tag">API Architecture</span>
+            </div>
+          </div>
+
+          <!-- ANALYST -->
+          <div class="position-card">
+            <div class="pos-header">
+              <div class="pos-left">
+                <div class="pos-title">Analyst</div>
+                <div class="pos-track">Strategy &amp; Analytics · 2021 – 2023</div>
+              </div>
+              <div class="pos-status">
+                <span class="status-dot status-gray"></span>
+                <span class="pos-status-text">PREVIOUS</span>
+              </div>
+            </div>
+            <ul class="bullets">
+              <li>Developed 3-year customer acquisition strategy for nonprofit small business lender, analyzing SBA disbursement data and lending gaps across 50 states to prioritize high-opportunity markets</li>
+              <li>Built business case for $24M banking modernization by mapping 300+ legacy applications to identify integration bottlenecks, prioritizing 170+ features into a 2-year roadmap that secured C-suite sign-off</li>
+              <li>Served as product owner for cloud banking integration layer, querying Azure DevOps data to track sprint velocity and surface bottlenecks, managing backlog prioritization across 40+ systems and 100+ APIs</li>
+              <li>Developed business case for mobile banking platform, translating strategic objectives into 60 prioritized features with projected deployment to 800K+ customers and $3M incremental annual revenue</li>
+              <li>Conducted 40+ executive discovery sessions with senior management, translating insights into recommendations that shaped multi-year digital transformation vision</li>
+            </ul>
+            <div class="role-tags">
+              <span class="role-tag">Business Case Development</span>
+              <span class="role-tag">Go-to-Market Strategy</span>
+              <span class="role-tag">Market Research</span>
+              <span class="role-tag">Product Strategy</span>
+              <span class="role-tag">Agile Methodologies</span>
+              <span class="role-tag">Azure DevOps</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── VENTURES ──────────────────────────────────────── -->
+      <section id="ventures" class="section">
+        <div class="section-header">
+          <span class="section-badge">VNT</span>
+          <h2 class="section-title">Venture &amp; Leadership</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="ventures-grid">
+
+          <!-- BSCU -->
+          <div class="venture-card featured reveal">
+            <div class="vc-header">
+              <span class="ticker-tag">BSCU</span>
+              <div class="vc-identity">
+                <div class="vc-name">Berkeley Student Credit Union</div>
+                <div class="vc-role">Founder</div>
+              </div>
+              <div class="vc-live">
+                <span class="status-dot status-green"></span>
+                <span class="vc-live-text">CURRENT</span>
+              </div>
+            </div>
+            <div class="vc-meta">Berkeley, CA · 2026–Present</div>
+            <ul class="bullets">
+              <li>Pursuing a California credit union charter to launch a digital-native institution serving consumer banking products for UC Berkeley's 45,000+ students and sponsor bank infrastructure for fintech startup partners</li>
+              <li>Developing initial product demo with AI prototyping tools to validate demand for consumer banking and sponsor bank offerings</li>
+            </ul>
+            <div class="role-tags">
+              <span class="role-tag">Product Strategy</span>
+              <span class="role-tag">Go-to-Market Strategy</span>
+              <span class="role-tag">Business Case Development</span>
+              <span class="role-tag">AI Prototyping</span>
+            </div>
+          </div>
+
+          <!-- HFTC -->
+          <div class="venture-card reveal">
+            <div class="vc-header">
+              <span class="ticker-tag">HFTC</span>
+              <div class="vc-identity">
+                <div class="vc-name">Haas FinTech Club</div>
+                <div class="vc-role">VP of Careers</div>
+              </div>
+              <div class="vc-live">
+                <span class="status-dot status-green"></span>
+                <span class="vc-live-text">CURRENT</span>
+              </div>
+            </div>
+            <div class="vc-meta">Berkeley, CA · 2026–Present</div>
+            <ul class="bullets">
+              <li>Driving industry engagement strategy by identifying target companies, conducting outreach to fintech leaders, and securing partnerships for career programming serving 100+ full-time and evening/weekend MBA students</li>
+            </ul>
+            <div class="role-tags">
+              <span class="role-tag">Go-to-Market Strategy</span>
+              <span class="role-tag">Strategic Planning</span>
+              <span class="role-tag">Market Research</span>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── SKILLS ─────────────────────────────────────────── -->
+      <section id="skills" class="section">
+        <div class="section-header">
+          <span class="section-badge">SKL</span>
+          <h2 class="section-title">Skills</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="skills-layout">
+
+          <!-- DONUT CHART -->
+          <div class="skills-chart reveal">
+            <div class="donut-wrap">
+              <svg class="donut-svg" viewBox="0 0 200 200" aria-label="Skill allocation chart">
+                <!-- Track -->
+                <circle cx="100" cy="100" r="70" fill="none" stroke="#1e2d4a" stroke-width="28"/>
+                <!-- Strategy 30% · circumference = 439.82 -->
+                <circle class="donut-seg" cx="100" cy="100" r="70" fill="none"
+                  stroke="#00d4ff" stroke-width="28"
+                  stroke-dasharray="131.9 307.9"
+                  stroke-dashoffset="0"
+                  transform="rotate(-90 100 100)"/>
+                <!-- Operations 25% -->
+                <circle class="donut-seg" cx="100" cy="100" r="70" fill="none"
+                  stroke="#7c3aed" stroke-width="28"
+                  stroke-dasharray="109.9 329.9"
+                  stroke-dashoffset="-131.9"
+                  transform="rotate(-90 100 100)"/>
+                <!-- Analytics 20% -->
+                <circle class="donut-seg" cx="100" cy="100" r="70" fill="none"
+                  stroke="#10b981" stroke-width="28"
+                  stroke-dasharray="87.9 351.9"
+                  stroke-dashoffset="-241.8"
+                  transform="rotate(-90 100 100)"/>
+                <!-- Product 15% -->
+                <circle class="donut-seg" cx="100" cy="100" r="70" fill="none"
+                  stroke="#f59e0b" stroke-width="28"
+                  stroke-dasharray="65.9 373.9"
+                  stroke-dashoffset="-329.7"
+                  transform="rotate(-90 100 100)"/>
+                <!-- Technical 10% -->
+                <circle class="donut-seg" cx="100" cy="100" r="70" fill="none"
+                  stroke="#ef4444" stroke-width="28"
+                  stroke-dasharray="43.9 395.9"
+                  stroke-dashoffset="-395.6"
+                  transform="rotate(-90 100 100)"/>
+                <!-- Center label -->
+                <text x="100" y="96" text-anchor="middle" class="donut-center-top">SKILL</text>
+                <text x="100" y="112" text-anchor="middle" class="donut-center-bot">ALLOCATION</text>
+              </svg>
+            </div>
+            <div class="donut-legend">
+              <div class="legend-row">
+                <span class="legend-pip" style="background:#00d4ff"></span>
+                <span class="legend-name">Strategy</span>
+                <span class="legend-pct">30%</span>
+              </div>
+              <div class="legend-row">
+                <span class="legend-pip" style="background:#7c3aed"></span>
+                <span class="legend-name">Operations</span>
+                <span class="legend-pct">25%</span>
+              </div>
+              <div class="legend-row">
+                <span class="legend-pip" style="background:#10b981"></span>
+                <span class="legend-name">Analytics</span>
+                <span class="legend-pct">20%</span>
+              </div>
+              <div class="legend-row">
+                <span class="legend-pip" style="background:#f59e0b"></span>
+                <span class="legend-name">Product</span>
+                <span class="legend-pct">15%</span>
+              </div>
+              <div class="legend-row">
+                <span class="legend-pip" style="background:#ef4444"></span>
+                <span class="legend-name">Technical</span>
+                <span class="legend-pct">10%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SKILL TAGS -->
+          <div class="skills-tags reveal">
+            <div class="skill-cat">
+              <div class="skill-cat-label" style="color:#00d4ff">STRATEGY</div>
+              <div class="skill-tag-row">
+                <span class="stag" data-cat="strategy">Go-to-Market Strategy</span>
+                <span class="stag" data-cat="strategy">Strategic Planning</span>
+                <span class="stag" data-cat="strategy">Business Case Development</span>
+                <span class="stag" data-cat="strategy">Market &amp; Competitive Analysis</span>
+                <span class="stag" data-cat="strategy">Enterprise Software Evaluation</span>
+              </div>
+            </div>
+            <div class="skill-cat">
+              <div class="skill-cat-label" style="color:#7c3aed">OPERATIONS</div>
+              <div class="skill-tag-row">
+                <span class="stag" data-cat="operations">KPI Framework Development</span>
+                <span class="stag" data-cat="operations">Program Management</span>
+                <span class="stag" data-cat="operations">Performance Reporting</span>
+                <span class="stag" data-cat="operations">Agile Methodologies</span>
+              </div>
+            </div>
+            <div class="skill-cat">
+              <div class="skill-cat-label" style="color:#10b981">ANALYTICS</div>
+              <div class="skill-tag-row">
+                <span class="stag" data-cat="analytics">SQL</span>
+                <span class="stag" data-cat="analytics">Data Analysis</span>
+                <span class="stag" data-cat="analytics">Market Research</span>
+              </div>
+            </div>
+            <div class="skill-cat">
+              <div class="skill-cat-label" style="color:#f59e0b">PRODUCT</div>
+              <div class="skill-tag-row">
+                <span class="stag" data-cat="product">Product Strategy</span>
+              </div>
+            </div>
+            <div class="skill-cat">
+              <div class="skill-cat-label" style="color:#ef4444">TECHNICAL</div>
+              <div class="skill-tag-row">
+                <span class="stag" data-cat="technical">Azure DevOps</span>
+                <span class="stag" data-cat="technical">AI Prototyping</span>
+                <span class="stag" data-cat="technical">API Architecture</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── EDUCATION ──────────────────────────────────────── -->
+      <section id="education" class="section">
+        <div class="section-header">
+          <span class="section-badge">EDU</span>
+          <h2 class="section-title">Education</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="edu-stack">
+
+          <div class="edu-card reveal">
+            <div class="edu-header">
+              <span class="ticker-tag">HAAS</span>
+              <div class="edu-identity">
+                <div class="edu-school">UC Berkeley, Haas School of Business</div>
+                <div class="edu-degree">Master of Business Administration</div>
+              </div>
+              <div class="edu-right">
+                <div class="edu-status-row">
+                  <span class="status-dot status-green"></span>
+                  <span class="edu-status-txt">CURRENT</span>
+                </div>
+                <div class="edu-dates">2025 – 2027</div>
+              </div>
+            </div>
+            <div class="edu-tags">
+              <span class="etag">FinTech Club, VP of Careers</span>
+              <span class="etag">Asian Business Club, Co-President</span>
+              <span class="etag">MBA Admissions Interviewer</span>
+            </div>
+          </div>
+
+          <div class="edu-card reveal">
+            <div class="edu-header">
+              <span class="ticker-tag">CMU</span>
+              <div class="edu-identity">
+                <div class="edu-school">Carnegie Mellon University</div>
+                <div class="edu-degree">Bachelor of Science, Information Systems · Minor in Human-Computer Interaction</div>
+              </div>
+              <div class="edu-right">
+                <div class="edu-status-row" style="color:var(--txt-2)">
+                  <span class="status-dot status-gray"></span>
+                  <span class="edu-status-txt" style="color:var(--txt-2)">PREVIOUS</span>
+                </div>
+                <div class="edu-dates">2017 – 2021</div>
+              </div>
+            </div>
+            <div class="edu-tags">
+              <span class="etag">Information Systems</span>
+              <span class="etag">Human-Computer Interaction</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── CONTACT ─────────────────────────────────────────── -->
+      <section id="contact" class="section">
+        <div class="section-header">
+          <span class="section-badge">CON</span>
+          <h2 class="section-title">Contact</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="contact-grid">
+          <a href="mailto:charleyzhao@mba.berkeley.edu" class="contact-card reveal">
+            <span class="contact-lbl">EMAIL</span>
+            <span class="contact-val">charleyzhao@mba.berkeley.edu</span>
+          </a>
+          <a href="https://linkedin.com/in/charleyjzhao" target="_blank" rel="noopener" class="contact-card reveal">
+            <span class="contact-lbl">LINKEDIN</span>
+            <span class="contact-val">linkedin.com/in/charleyjzhao</span>
+          </a>
+          <div class="contact-card reveal">
+            <span class="contact-lbl">STATUS</span>
+            <span class="contact-val">
+              <span class="status-dot status-green" style="flex-shrink:0"></span>
+              Open to Opportunities
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <span class="footer-text">CZ // PORTFOLIO_v2026 // BUILT WITH CLAUDE CODE // ⌘K TO NAVIGATE</span>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- ── COMMAND PALETTE ──────────────────────────────────────── -->
+  <div id="cmd-palette" class="cmd-hidden" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div id="cmd-backdrop"></div>
+    <div id="cmd-modal">
+      <div id="cmd-input-row">
+        <span class="cmd-prompt">&gt;</span>
+        <input type="text" id="cmd-input" placeholder="Navigate sections or search..." autocomplete="off" spellcheck="false">
+        <kbd class="cmd-esc-hint">ESC</kbd>
+      </div>
+      <div id="cmd-body">
+        <div class="cmd-group-label">NAVIGATE</div>
+        <div class="cmd-item" data-href="#hero" tabindex="-1">
+          <span class="cmd-code">HME</span>
+          <span class="cmd-desc">Home — Charley Zhao, MBA Candidate</span>
+        </div>
+        <div class="cmd-item" data-href="#experience" tabindex="-1">
+          <span class="cmd-code">EXP</span>
+          <span class="cmd-desc">Experience — Deloitte Consulting, 2021–2025</span>
+        </div>
+        <div class="cmd-item" data-href="#ventures" tabindex="-1">
+          <span class="cmd-code">VNT</span>
+          <span class="cmd-desc">Ventures — Berkeley Student Credit Union, Haas FinTech</span>
+        </div>
+        <div class="cmd-item" data-href="#skills" tabindex="-1">
+          <span class="cmd-code">SKL</span>
+          <span class="cmd-desc">Skills — Strategy, Operations, Analytics, Product, Technical</span>
+        </div>
+        <div class="cmd-item" data-href="#education" tabindex="-1">
+          <span class="cmd-code">EDU</span>
+          <span class="cmd-desc">Education — Haas MBA · Carnegie Mellon B.S.</span>
+        </div>
+        <div class="cmd-item" data-href="#contact" tabindex="-1">
+          <span class="cmd-code">CON</span>
+          <span class="cmd-desc">Contact — charleyzhao@mba.berkeley.edu</span>
+        </div>
+        <div class="cmd-group-label">QUICK LINKS</div>
+        <div class="cmd-item" data-href="mailto:charleyzhao@mba.berkeley.edu" tabindex="-1">
+          <span class="cmd-code">@</span>
+          <span class="cmd-desc">Send Email</span>
+        </div>
+        <div class="cmd-item" data-href="https://linkedin.com/in/charleyjzhao" data-external="true" tabindex="-1">
+          <span class="cmd-code">LI</span>
+          <span class="cmd-desc">LinkedIn Profile</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
