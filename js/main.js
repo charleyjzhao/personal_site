@@ -10,7 +10,7 @@
   const bootScreen = document.getElementById('boot-screen');
   const mainLayout = document.getElementById('main-layout');
 
-  const TEXT = "Loading Charley's world...";
+  const TEXT = "About me you ask...";
   let i = 0;
 
   function typeNext() {

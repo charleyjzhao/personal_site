@@ -70,7 +70,7 @@ ul { list-style: none; }
 
 #boot-terminal {
   font-family: var(--mono);
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--txt-2);
   width: min(600px, 90vw);
   line-height: 1.8;
