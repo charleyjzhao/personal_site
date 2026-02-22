@@ -44,13 +44,10 @@ function onMainReady() {
 
 /* ── TYPEWRITER ─────────────────────────────────────────────── */
 function initTypewriter() {
-  const nameEl    = document.getElementById('tw-name');
-  const taglineEl = document.getElementById('tw-tagline');
-  const nameCursor = document.getElementById('name-cursor');
-  const tagCursor  = document.getElementById('tag-cursor');
+  const summaryEl = document.getElementById('tw-summary');
+  const tagCursor = document.getElementById('tag-cursor');
 
-  const NAME    = 'Charley Zhao';
-  const TAGLINE = '> Fintech Product, Strategy & Operations · MBA Candidate · Berkeley Haas \'27';
+  const SUMMARY = 'Drove banking technology transformations from the core to experience layer for financial institutions. Now at Haas to build on the bleeding edge of financial infrastructure.';
 
   function typeInto(el, text, speed, onDone) {
     let i = 0;
@@ -65,17 +62,9 @@ function initTypewriter() {
     step();
   }
 
-  // Type name first, then tagline
-  typeInto(nameEl, NAME, 55, () => {
-    // Remove blinking block cursor after name is done
-    setTimeout(() => {
-      if (nameCursor) nameCursor.style.display = 'none';
-      tagCursor.style.display = 'inline';
-      typeInto(taglineEl, TAGLINE, 28, () => {
-        // Freeze the tagline cursor after done
-        setTimeout(() => { tagCursor.style.animationIterationCount = '3'; }, 2000);
-      });
-    }, 320);
+  tagCursor.style.display = 'inline';
+  typeInto(summaryEl, SUMMARY, 22, () => {
+    setTimeout(() => { tagCursor.style.animationIterationCount = '3'; }, 2000);
   });
 }
 
