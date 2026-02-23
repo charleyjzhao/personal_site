@@ -1074,9 +1074,10 @@ ul { list-style: none; }
   .company-bar    { flex-wrap: wrap; gap: 8px; }
   .company-range  { margin-left: 0; }
 
-  /* Keep title and status on same line */
-  .pos-header     { flex-wrap: nowrap; align-items: center; }
+  /* Keep title and status on same line, dot aligned to title row */
+  .pos-header     { flex-wrap: nowrap; align-items: flex-start; }
   .pos-left       { min-width: 0; }
+  .pos-status     { padding-top: 2px; flex-shrink: 0; }
   .pos-title      { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .pos-title.carousel-active { text-overflow: clip; }
   .pos-title.carousel-active .carousel-inner {
@@ -1095,6 +1096,7 @@ ul { list-style: none; }
   .hero-name      { font-size: clamp(30px, 9vw, 42px); }
   .role-tags      { gap: 5px; }
   .role-tag       { font-size: 10px; padding: 2px 7px; }
-  .edu-header     { flex-direction: column; gap: 8px; }
-  .edu-right      { text-align: left; }
+  .edu-header     { flex-direction: row; align-items: flex-start; }
+  .edu-identity   { min-width: 0; flex: 1; }
+  .edu-right      { flex-shrink: 0; }
 }
