@@ -268,6 +268,7 @@ function initCommandPalette() {
 
   // Open triggers
   openBtn?.addEventListener('click', open);
+  document.getElementById('mobile-cmd-btn')?.addEventListener('click', open);
 
   // Use capture:true so the listener fires before the browser handles ⌘K
   document.addEventListener('keydown', e => {

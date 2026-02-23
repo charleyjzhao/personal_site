@@ -641,6 +641,7 @@ ul { list-style: none; }
   transition: border-color 0.15s, background 0.15s;
 }
 .venture-card.featured {
+  grid-row: span 2;
   border-color: var(--border);
   background: var(--bg-card);
 }
@@ -993,33 +994,93 @@ ul { list-style: none; }
 .cmd-item.cmd-hidden-item { display: none; }
 
 /* ══════════════════════════════════════════════════════════════
-   RESPONSIVE
+   MOBILE TOP BAR (hidden on desktop)
+   ══════════════════════════════════════════════════════════════ */
+.mobile-top-bar { display: none; }
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE — TABLET (≤900px)
    ══════════════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
-  :root { --rail-w: 60px; }
+  :root { --rail-w: 200px; }
+  .rail-monogram  { font-size: 13px; }
+}
 
-  .rail-label     { display: none; }
-  .rail-monogram  { font-size: 15px; letter-spacing: 2px; padding: 0 0 20px; text-align: center; }
-  .rail-link      { padding: 10px; justify-content: center; }
-  .rail-status-text { display: none; }
-  .rail-cmd-btn span { display: none; }
-  .rail-cmd-btn   { justify-content: center; padding: 10px; }
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE — MOBILE (≤768px)
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Hide rail, show mobile top bar */
+  #left-rail { display: none; }
+  #main-content { margin-left: 0; }
 
-  #hero           { padding: 40px var(--h-pad) 36px; }
-  .section        { padding: 40px var(--h-pad); }
-  #footer         { padding: 24px var(--h-pad); }
+  .mobile-top-bar {
+    display: flex;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 48px;
+    background: var(--bg-2);
+    border-bottom: 1px solid var(--border);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 300;
+  }
+  .mobile-monogram {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--cyan);
+    letter-spacing: 1px;
+  }
+  .mobile-cmd-btn {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--txt-2);
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 4px 10px;
+    cursor: pointer;
+  }
 
+  /* Spacing */
+  #hero    { padding: calc(48px + 32px) 20px 24px; }
+  #experience { padding-top: 0; }
+  .section { padding: 28px 20px 16px; }
+  #footer  { padding: 20px; }
+
+  /* Hero text */
+  .hero-name     { font-size: clamp(36px, 10vw, 52px); }
+  .hero-subtitle { font-size: 12px; }
+  .hero-tagline  { font-size: 12px; }
+
+  /* Grids → single column */
   .ventures-grid  { grid-template-columns: 1fr; }
   .skills-layout  { grid-template-columns: 1fr; }
   .contact-grid   { grid-template-columns: 1fr; }
-  .hero-metrics   { gap: 10px; }
-  .kpi-row        { flex-wrap: wrap; }
-  .kpi-cell       { min-width: calc(33% - 8px); }
+
+  /* Reset BSCU span on single-column layout */
+  .venture-card.featured { grid-row: span 1; }
+
+  /* Company bar wraps on small screens */
+  .company-bar    { flex-wrap: wrap; gap: 8px; }
+  .company-range  { margin-left: 0; }
+
+  /* Position card status wraps nicely */
+  .pos-header     { flex-wrap: wrap; gap: 6px; }
+
+  /* Skills donut centers */
+  .donut-wrap     { width: 140px; }
 }
 
-@media (max-width: 560px) {
-  .hero-metrics   { flex-direction: column; }
-  .sparkline-wrap { width: 140px; }
-  .ventures-grid,
-  .contact-grid   { grid-template-columns: 1fr; }
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE — SMALL MOBILE (≤480px)
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .hero-name      { font-size: clamp(30px, 9vw, 42px); }
+  .role-tags      { gap: 5px; }
+  .role-tag       { font-size: 10px; padding: 2px 7px; }
+  .edu-header     { flex-direction: column; gap: 8px; }
+  .edu-right      { text-align: left; }
 }
