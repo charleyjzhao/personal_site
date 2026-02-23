@@ -40,6 +40,25 @@ function onMainReady() {
   initReveal();
   initRailNav();
   initCommandPalette();
+  setTimeout(initCarouselTitles, 120);
+}
+
+/* ── CAROUSEL TITLES (mobile overflow scroll) ───────────────── */
+function initCarouselTitles() {
+  if (window.innerWidth > 768) return;
+
+  document.querySelectorAll('.pos-title').forEach(title => {
+    if (title.scrollWidth <= title.clientWidth + 2) return;
+
+    const dist = title.scrollWidth - title.clientWidth;
+    const inner = document.createElement('span');
+    inner.className = 'carousel-inner';
+    inner.textContent = title.textContent;
+    title.textContent = '';
+    title.appendChild(inner);
+    title.style.setProperty('--scroll-dist', `-${dist}px`);
+    title.classList.add('carousel-active');
+  });
 }
 
 /* ── TYPEWRITER ─────────────────────────────────────────────── */

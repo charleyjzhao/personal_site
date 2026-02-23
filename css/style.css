@@ -94,6 +94,13 @@ ul { list-style: none; }
   50%       { opacity: 0; }
 }
 
+/* title-carousel: hold 3s → scroll right 2.5s → hold 1s → scroll left 2.5s → hold 5s */
+@keyframes title-carousel {
+  0%,  21% { transform: translateX(0); }
+  39%, 46% { transform: translateX(var(--scroll-dist)); }
+  64%, 100%{ transform: translateX(0); }
+}
+
 /* ══════════════════════════════════════════════════════════════
    LAYOUT
    ══════════════════════════════════════════════════════════════ */
@@ -1067,8 +1074,15 @@ ul { list-style: none; }
   .company-bar    { flex-wrap: wrap; gap: 8px; }
   .company-range  { margin-left: 0; }
 
-  /* Position card status wraps nicely */
-  .pos-header     { flex-wrap: wrap; gap: 6px; }
+  /* Keep title and status on same line */
+  .pos-header     { flex-wrap: nowrap; align-items: center; }
+  .pos-left       { min-width: 0; }
+  .pos-title      { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pos-title.carousel-active { text-overflow: clip; }
+  .pos-title.carousel-active .carousel-inner {
+    display: inline-block;
+    animation: title-carousel 14s linear infinite;
+  }
 
   /* Skills donut centers */
   .donut-wrap     { width: 140px; }
