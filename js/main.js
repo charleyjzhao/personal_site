@@ -38,7 +38,6 @@
 function onMainReady() {
   initTypewriter();
   initReveal();
-  initRailNav();
   initCommandPalette();
   setTimeout(initCarouselTitles, 120);
 }
@@ -182,43 +181,6 @@ function initReveal() {
   }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
   revealEls.forEach(el => observer.observe(el));
-}
-
-/* ── LEFT RAIL ACTIVE STATE ─────────────────────────────────── */
-function initRailNav() {
-  const sections = [...document.querySelectorAll('section[id]')];
-  const links    = document.querySelectorAll('.rail-link');
-
-  function setActive(id) {
-    links.forEach(l => {
-      l.classList.toggle('active', l.getAttribute('href') === `#${id}`);
-    });
-  }
-
-  function onScroll() {
-    const scrollY  = window.scrollY;
-    const offset   = 140; // px from top of viewport — section "activates" when its top crosses this line
-    let current    = sections[0].id;
-
-    sections.forEach(section => {
-      if (section.offsetTop - offset <= scrollY) {
-        current = section.id;
-      }
-    });
-
-    setActive(current);
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // set correct state on load
-
-  // Smooth scroll on rail link click
-  links.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      document.querySelector(link.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
 }
 
 /* ── COMMAND PALETTE ────────────────────────────────────────── */
